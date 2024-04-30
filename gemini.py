@@ -29,7 +29,7 @@ def gemeni_call(owner, repo_name, pull_number):
     result_pr_details_json = json.dumps(pr_details)
     result_latest_pr_details_json = json.dumps(latest_pr_details)
     
-    response = model.generate_content(f'${result_pr_details_json} Review all changes suggest changes and provide feedback')
+    response = model.generate_content(f'${pr_details} Review all changes suggest changes and provide feedback')
 
 
      # Extract generated text from the response
